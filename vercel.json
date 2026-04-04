@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/mail.js": {
+    "app/api/mail/route.ts": {
       "memory": 128,
       "maxDuration": 10
     }
