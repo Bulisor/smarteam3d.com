@@ -2,14 +2,13 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Facebook, Twitter, Youtube, Newspaper, FileText } from 'lucide-react'
+import { Facebook, Twitter, Youtube, FileText } from 'lucide-react'
 import { useTheme } from '@/components/providers/ThemeProvider'
 
 const socials = [
   { icon: Facebook, href: 'https://www.facebook.com/SmarTeam3D', label: 'Facebook', external: true },
   { icon: Twitter, href: 'https://twitter.com/SmarTeam3D', label: 'Twitter', external: true },
   { icon: Youtube, href: 'https://www.youtube.com/channel/UC99BoLYeomoBYe_x4QhLNnw', label: 'YouTube', external: true },
-  { icon: Newspaper, href: '/news', label: 'News', external: false },
   { icon: FileText, href: '/cv', label: 'CV', external: false },
 ]
 

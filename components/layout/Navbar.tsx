@@ -63,7 +63,7 @@ export default function Navbar() {
     setOpen(false)
   }
 
-  const isTransparent = !scrolled && !open
+  const isTransparent = isHome && !scrolled && !open
   const isDarkBar = isTransparent || theme === 'dark'
 
   const navBg = isTransparent
@@ -108,7 +108,7 @@ export default function Navbar() {
           {links.map((l) => (
             <li key={l.href}>
               <a
-                href={l.href}
+                href={isHome ? l.href : `/${l.href}`}
                 onClick={(e) => scrollTo(e, l.href)}
                 className={`${getLinkClass(l.href)} text-sm font-medium tracking-wide transition-colors duration-200`}
               >
@@ -157,4 +157,19 @@ export default function Navbar() {
         >
           <ul className="flex flex-col gap-1">
             {links.map((l) => (
-              <li key={l.
+              <li key={l.href}>
+                <a
+                  href={isHome ? l.href : `/${l.href}`}
+                  onClick={(e) => scrollTo(e, l.href)}
+                  className={`block ${getLinkClass(l.href)} py-2 text-sm font-medium transition-colors`}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </nav>
+  )
+}

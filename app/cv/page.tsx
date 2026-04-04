@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import CVHero from '@/components/cv/CVHero'
 import CVWork from '@/components/cv/CVWork'
 import CVAbout from '@/components/cv/CVAbout'
-import CVContact from '@/components/cv/CVContact'
 
 export const metadata: Metadata = {
   title: 'CV | Marian Gaje | SmarTeam3D',
@@ -16,7 +15,6 @@ export default function CVPage() {
       <CVHero />
       <CVWork />
       <CVAbout />
-      <CVContact />
     </main>
   )
 }
