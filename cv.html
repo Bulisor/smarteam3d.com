@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>SmarTeam3D | 3D advertisement, 3D model viewer, 3D product configurators, 3D industrial configurators,
+		virtual tours, virtual reality, augmented reality, WEBXR</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="description"
+		content="3D advertisement, 3D model viewer, 3D product configurators, 3D industrial configurators, virtual tours, virtual reality, augmented reality, WEBXR">
+
+	<meta name="" property="" content="" />
+	<link rel="shortcut icon" href="fav/favicon.ico">
+	<link rel="icon" type="image/png" href="fav/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<style>
+		:root {
+			--swiper-theme-color: white;
+		}
+
+		.video-wrapper {
+			position: relative;
+			padding-bottom: 56.25%;
+			padding-top: 25px;
+		}
+
+		.video-wrapper iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+	<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+	<nav class="bg-neutral-800 text-white p-2 shadow-md sticky top-0 z-50">
+		<div class="container mx-auto flex justify-between items-center font-medium">
+			<a href="#" class="flex items-center">
+				<img src="img_new/logo_white2.png" alt="Your Logo" class="max-h-12">
+			</a>
+
+			<div id="standard-menu" class="hidden md:flex items-center">
+				<a href="#home" class="px-4 py-2 hover:text-red-800">Home</a>
+				<a href="#work" class="px-4 py-2 hover:text-red-800">Work</a>
+				<a href="#about" class="px-4 py-2 hover:text-red-800">About</a>
+				<a href="#contact" class="px-4 py-2 hover:text-red-800">Contact</a>
+			</div>
+
+			<div id="breadcrumb-menu" class="md:hidden flex items-center">
+				<a href="#home" class="p-2">Home</a>
+				<a href="#work" class="p-2">Work</a>
+				<a href="#about" class="p-2">About</a>
+				<a href="#contact" class="p-2">Contact</a>
+			</div>
+		</div>
+	</nav>
+
+	<section id="home" class="bg-white min-h-[calc(100vh-60px)] flex flex-col justify-center items-center">
+		<div class="container mx-auto px-4 md:px-0 text-center">
+			<img src="img_new/profile.jpg" alt="Profile"
+				class="mx-auto w-full max-w-xs md:max-w-md my-3 rounded-full flex-shrink-0">
+			<h1 class="text-3xl text-center md:text-4xl lg:text-5xl font-bold mb-6">From Math to 3D World</h1>
+			<p class="text-xl text-center mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">Hey, I'm <span class="font-bold">Marian
+					Gaje</span> and I have a
+				passion for mathematics and the world of 3D. While I don't usually brand myself strictly as a
+				<span class="font-bold">webGL developer</span>, I've certainly enjoyed leaving my creative footprint in that space.
+			</p>
+	
+			<p class="text-xl font-bold text-center mb-4 w-full md:w-2/3 lg:w-1/2 mx-auto">If you have a great project that
+				needs some amazing 3D skills, I’m
+				your guy! <a class="underline text-red-800" href="#contact">Write me!</a></p>
+		</div>
+	</section>
+
+	<section id="work" class="py-20">
+		<div class="container mx-auto px-4 md:px-0">
+			<h2 class="text-3xl text-center md:text-4xl lg:text-5xl font-bold mb-10">My journey through the years</h2>
+			<div class="grid grid-cols-1 gap-8">
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">Small Apps I
+								Developed in My Free Time</h2>
+							<ul class="list-disc list-inside space-y-1 pt-6 md:space-y-2 lg:space-y-1 xl:space-y-4">
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">Car
+										Configurator 1:</a>
+									Design your dream car from wheels to paint.
+									[<a href="https://www.smarteam3d.com/portfolio/car_config" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">3D
+										Scatterplot:</a>
+									A graph where points move freely in 3D space.
+									[<a href="https://www.smarteam3d.com/portfolio/3DScatterPlot" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">360 Photo
+										Viewer:</a>
+									For those wanting to view the world at 360 degrees.
+									[<a href="https://www.smarteam3d.com/portfolio/photo_viewer" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">Car
+										Configurator 2:</a>
+									Design your dream car from wheels to paint.
+									[<a href="https://www.smarteam3d.com/portfolio/car_mx5/index" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">Cabinet
+										Configurator:</a>
+									A tool for customizing and visualizing cabinets.
+									[<a href="https://www.smarteam3d.com" target="_blank" class="text-blue-600 font-medium">No Link yet</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">Truck
+										Configurator:</a>
+									Design your dream car from wheels to paint.
+									[<a href="https://www.smarteam3d.com/portfolio/truck/index" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+								<li class="text-sm md:text-base">
+									<a href="#link_to_carconfig_page" class="font-bold hover:text-red-800">3D Hat
+										Configurator:</a>
+									Customize a hat in 3D.
+									[<a href="https://www.smarteam3d.com/the3dfactory/hat/index" target="_blank" class="text-blue-600 font-medium">Link</a>]
+								</li>
+							</ul>
+						</div>
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/0_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_3.jpg" alt="Image 3" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_4.jpg" alt="Image 4" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_5.jpg" alt="Image 5" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_6.jpg" alt="Image 6" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/0_7.jpg" alt="Image 7" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/1_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/1_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/1_3.jpg" alt="Image 3" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/1_4.jpg" alt="Image 4" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">Ideeza - when IoT meet 3D ~1y</h2>
+
+							<h4 class="text-lg font-semibold mt-4 mb-2">Features</h4>
+							<ul class="list-disc pl-6 mb-2">
+								<li>Ability to set board dimensions, type, and layers</li>
+								<li>Addition of various types of holes and cuts</li>
+								<li>Create electronic parts as 3D objects from code</li>
+								<li>Edit electronic PCB on realtime as 3D objects</li>
+								<li>Building the editor for system operation code</li>
+								<li>Assembly cover and create construction animations</li>
+							</ul>
+							<h4 class="text-lg font-semibold mb-1">Tech Stack</h4>
+							<p class="mb-4">
+								<span class="inline-block mr-1">Babylon.js (js/ts),</span>
+								<span class="inline-block">Vue.js</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">Holzplatte - 2D & 3D Configurator ~1y</h2>
+
+							<h3 class="text-lg font-semibold mt-4">Holzplatte - 2D Configurator
+								[<a href="https://holzplatte.de/en/decorative-particle-boards/decorative-laminates/44/sonoma-oak" target="_blank"
+									class="text-blue-600 font-medium">Link</a>]
+							</h3>
+							<h4 class="text-lg font-semibold mt-4 mb-2">Features</h4>
+							<ul class="list-disc pl-6 mb-2">
+								<li>Ability to set board dimensions, type, and shape</li>
+								<li>Addition of various types of holes and cuts</li>
+								<li>Dynamic pricing based on configuration settings</li>
+								<li>Generation of a PDF with board image and details</li>
+							</ul>
+							<h4 class="text-lg font-semibold mb-1">Tech Stack</h4>
+							<p class="mb-4">
+								<span class="inline-block mr-1">Paper.js (js),</span>
+								<span class="inline-block">Vue.js</span>
+							</p>
+
+							<h3 class="text-lg font-semibold mt-4 mb-2">Holzplatte - 3D Configurator
+								[<a href="https://holzplatte.de/en/spiegelschraenke-bad/3d-spiegelschraenke/3d-spiegelschrank-mit-seitenregale/122/3d-side-space" target="_blank"
+									class="text-blue-600 font-medium">Link</a>]
+							</h3>
+							<h4 class="text-lg font-semibold mt-4 mb-2">Features</h4>
+							<ul class="list-disc pl-6 mb-2">
+								<li>Ability to set board dimensions, type, and shape</li>
+								<li>Addition of various types of holes and cuts</li>
+								<li>Dynamic pricing based on configuration settings</li>
+								<li>Generation of a PDF with board image and details</li>
+							</ul>
+							<h4 class="text-lg font-semibold mb-1">Tech Stack</h4>
+							<p class="mb-4">
+								<span class="inline-block mr-1">Babylon.js (js),</span>
+								<span class="inline-block">Vue.js</span>
+							</p>
+						</div>
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/2_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/2_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/2_3.jpg" alt="Image 3" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/2_4.jpg" alt="Image 4" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/3_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/3_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/3_3.jpg" alt="Image 3" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/3_4.jpg" alt="Image 4" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/3_5.jpg" alt="Image 5" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">
+								Logiqs - 3D	Industrial Configurators
+								[<a href="https://www.logiqs.nl/en/icube-as-rs"
+									target="_blank" class="text-blue-600 font-medium">Link</a>] ~3.5y
+							</h2>
+
+							<h4 class="text-lg font-semibold mt-4 mb-2">Features</h4>
+							<ul class="list-disc pl-6 mb-2">
+								<li>We built three different configurators: warehouse configurator, vertical farm configurator, and greenhouse configurator</li>
+								<li>The scene has been optimized to support large-scale projects, including expansive farm layouts and substantial warehouse designs</li>
+								<li>All scene information is computed in real-time based on user input <a href="https://www.youtube.com/watch?v=VEeMh4-PDJU" target="_blank" class="text-blue-600 font-medium">Link</a></li>
+								<li>A section featuring fully customizable manual items that can be placed, rotated, or multiplied according to user requirements</li>
+								<li>Receive an accurate budget quotation for the drawn system in just a few seconds</li>
+								<li>Implemented a guided tutorial to facilitate user navigation and interaction within the scene</li>
+								<li>Option to download both the system design and other data in various formats like JSON, 3D, or CAD</li>
+								<li>Run real time simulations of inbound and outbound based on user specifications <a href="https://www.youtube.com/watch?v=er0GiinNM2A" target="_blank" class="text-blue-600 font-medium">Link</a></li>
+							</ul>
+							<h4 class="text-lg font-semibold mb-1">Tech Stack</h4>
+							<p class="mb-4">
+								<span class="inline-block mr-1">Babylon.js (js /ts)</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">Brightspaces -
+							Real Estate on the Web [<a href="https://brightspaces.tech/space-planning" target="_blank"
+								class="text-blue-600 font-medium">Link</a>] ~1y</h2>
+							
+							<h4 class="text-lg font-semibold mt-4 mb-2">Features</h4>
+							<ul class="list-disc pl-6 mb-2">
+								<li>Load high-fidelity model for a realistic office space</li>
+								<li>Interactive multiple views of 3D model</li>
+								<li>3D virtual tour feature for immersive navigation</li>
+								<li>In-scene 3D interior design customization</li>
+								<li>Extensive menu interactions for 3D scene control</li>
+								<li>Optimization of the 3D scene for enhanced performance</li>
+							</ul>
+							<h4 class="text-lg font-semibold mb-1">Tech Stack</h4>
+							<p class="mb-4">
+								<span class="inline-block mr-1">Babylon.js (ts),</span>
+								<span class="inline-block">Vue.js,</span>
+								<span class="inline-block">React.js</span>
+							</p>
+						</div>
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/4_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/4_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/4_3.jpg" alt="Image 3" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white rounded-lg shadow-md overflow-hidden">
+					<div class="grid grid-cols-1 flex items-center lg:grid-cols-2 text-justify">
+
+						<div class="p-6 flex justify-center items-center">
+							<div class="relative w-full mx-auto">
+								<div class="swiper-container rounded-lg overflow-hidden">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide"><img src="img_new/more03/5_1.jpg" alt="Image 1" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/5_2.jpg" alt="Image 2" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/5_3.jpg" alt="Image 3" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/5_4.jpg" alt="Image 4" class="w-full"></div>
+										<div class="swiper-slide"><img src="img_new/more03/5_5.jpg" alt="Image 5" class="w-full"></div>
+									</div>
+
+									<div class="swiper-pagination mt-4"></div>
+									<div class="swiper-button-next"></div>
+									<div class="swiper-button-prev"></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="p-6 max-w-screen-md mx-auto">
+							<h2 class="font-semibold text-xl md:text-2xl mb-2 text-center md:text-left">Other Part-time
+								Projects</h2>
+							<ul class="list-disc list-inside space-y-1 pt-6 md:space-y-2 lg:space-y-1 xl:space-y-4">
+								<li class="text-sm md:text-base">
+									<span class="font-bold hover:text-red-800">Sneakers
+										Configurator</span>
+									Design your dream car from wheels to paint.
+								</li>
+								<li class="text-sm md:text-base">
+									<span class="font-bold hover:text-red-800">Real Estate
+										Configurator</span>
+									Overlay 3D models on a dynamic map using Mapbox.js
+								</li>
+								<li class="text-sm md:text-base">
+									<span class="font-bold hover:text-red-800">Spiritual
+										App</span>
+									An innovative way to send messages and thoughts to loved ones
+								</li>
+								<li class="text-sm md:text-base">
+									<span class="font-bold hover:text-red-800">Online Market
+										in VR</span>
+									Shopping from the couch, utilizing a VR headset
+								</li>
+								<li class="text-sm md:text-base">
+									<span class="font-bold hover:text-red-800">Bathroom
+										Configurator</span>
+									Bathroom designs with a range of fixtures and finishes
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+	</section>
+
+	<section id="about" class="mb-12 py-12 relative">
+		<div class="container mx-auto px-4 md:px-0">
+			<h1 class="text-3xl text-center md:text-4xl lg:text-5xl font-bold mb-10">More about me</h1>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+				<div class="card bg-white p-6 rounded-lg shadow-md">
+					<h2 class="font-semibold text-xl mb-2 text-center md:text-left">Full-stack developer, ...by mistake
+					</h2>
+					<h5 class="font-semibold mb-4 text-justify">07.2013 ~ 03.2016</h5>
+					<p class="mb-2 text-justify">So, it all began in 2013 when, with a mathematics degree under my belt
+						and solid logical skills, I decided to venture into programming</p>
+					<p class="mb-2 text-justify">I kicked things off with HTML and CSS, then sprinkled in some
+						JavaScript to bring my pages to life. Before long, my
+						journey took me deeper into the realm of back-end using PHP, stitching together a seamless bridge from
+						back to front.</p>
+					<p class="mb-2 text-justify">Just like that, I found myself as a full-stack developer - not by
+						design, but by simply diving deep and ticking off my tasks</p>
+					<p>&nbsp;</p>
+
+					<div class="relative">
+						<div class="swiper-container overflow-hidden">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/0_1.jpg" alt="Image 1"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/0_2.jpg" alt="Image 2"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/0_3.jpg" alt="Image 3"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/0_4.jpg" alt="Image 4"
+											class="w-full"></div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination mt-4"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white p-6 rounded-lg shadow-md">
+					<h2 class="font-semibold text-xl mb-2 text-center md:text-left">Falling for the 3D World</h2>
+					<h5 class="font-semibold mb-4">03.2016 ~ 11.2016</h5>
+					<p class="mb-2 text-justify">Fortunately, among the usual tasks, I tackled something a bit out of
+						the ordinary. I developed features to customize
+						your team's gear, logo, and even the players' faces, all using Three.js. [<a
+							class="text-blue-600 font-medium" href="https://www.youtube.com/watch?v=MNyBGgwF98Q"
+							target="_blank">Video1</a>,
+						<a class="text-blue-600 font-medium" href="https://www.youtube.com/watch?v=i-XBH6qlmXA"
+							target="_blank">Video2</a>]
+					</p>
+					<p class="mb-2 text-justify">That's where the spark ignited. And it was then that we decided to
+						develop a 3D strategy game for browsers.</p>
+					<p class="mb-2 text-justify">I enthusiastically began game development with WebGL and Babylon.js,
+						but soon we realized the tech wasn't up to our ambitious visions.</p>
+					<p>&nbsp;</p>
+
+					<div class="relative">
+						<div class="swiper-container overflow-hidden">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/1_1.jpg" alt="Image 1"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/1_2.jpg" alt="Image 2"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/1_3.jpg" alt="Image 3"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/1_4.jpg" alt="Image 4"
+											class="w-full"></div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination mt-4"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white p-6 rounded-lg shadow-md">
+					<h2 class="font-semibold text-xl mb-2 text-center md:text-left">Shifting Gears in Game Development
+					</h2>
+					<h5 class="font-semibold mb-4">11.2016 ~ 08.2017</h5>
+					<p class="mb-2 text-justify">Making a strategic shift, we transitioned to desktop development with
+						C# and Unity, setting our sights on creating a standalone PC game.
+						[<a class="text-blue-600 font-medium" href="https://www.youtube.com/watch?v=7MRQ2FPpOhI"
+							target="_blank">Video1</a>,
+						<a class="text-blue-600 font-medium" href="https://www.youtube.com/watch?v=uAeB3MbYtEU"
+							target="_blank">Video2</a>]
+					</p>
+					<p class="mb-2 text-justify">I enjoyed it more than I ever imagined, and I can confidently say I
+						learned a ton about software development
+						during that time... so much so that I thought I'd never make games again.</p>
+					<p class="mb-2 text-justify">Just kidding, of course! It was a great experience, but somehow not
+						quite what I was looking for.</p>
+
+					<div class="relative">
+						<div class="swiper-container overflow-hidden">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/2_1.jpg" alt="Image 1"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/2_2.jpg" alt="Image 2"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/2_3.jpg" alt="Image 3"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/2_4.jpg" alt="Image 4"
+											class="w-full"></div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination mt-4"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card bg-white p-6 rounded-lg shadow-md">
+					<h2 class="font-semibold text-xl mb-2 text-center md:text-left">Continuous self rediscovery</h2>
+					<h5 class="font-semibold mb-4">08.2017 ~ present</h5>
+					<p class="mb-2 text-justify">By August 2017, one chapter of my professional journey came to a close.
+						Following my tenure as an employee, I founded <b>Smarteam3D</b>, my solo endeavor. Smarteam3D embodies 
+						my passion and dedication, and the 3D realm is where I continue to push boundaries.</p>
+					<p class="mb-4 text-justify">Reflecting on these 6 years, with dedication and countless sleepless
+						nights, I can proudly say, "Looking back, every moment was worth it!"</p>
+
+					<div class="relative">
+						<div class="swiper-container overflow-hidden">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_1.jpg" alt="Image 1"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_2.jpg" alt="Image 2"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_3.jpg" alt="Image 3"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_4.jpg" alt="Image 4"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_5.jpg" alt="Image 5"
+											class="w-full"></div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide"><img src="img_new/more02/3_6.jpg" alt="Image 6"
+											class="w-full"></div>
+								</div>
+							</div>
+
+							<div class="swiper-pagination mt-4"></div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact" class="mb-12">
+		<div class="container mx-auto mt-12 px-4 md:px-0">
+			<div class="flex flex-wrap mb-6 max-w-5xl mx-auto px-4">
+
+				<div class="w-full md:w-1/2 p-3">
+					<h1 class="text-3xl font-bold mb-4">Let’s talk business</h1>
+					<p class="text-justify">Now that you know a lot about me, let me know if you are interested to work
+						with me, or if there's any way I can assist you.</p>
+
+					<div class="flex items-center mt-6">
+						<svg focusable="false" aria-hidden="true" fill="rgb(153 27 27)" width="24" height="24"
+							viewBox="0 0 24 24">
+							<path
+								d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z">
+							</path>
+						</svg>
+						<span class="px-3">contact@smarteam3d.com</span>
+					</div>
+
+					<div class="flex items-center mt-6">
+						<svg focusable="false" aria-hidden="true" fill="rgb(153 27 27)" width="24" height="24"
+							viewBox="0 0 24 24">
+							<path
+								d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z">
+							</path>
+						</svg>
+						<span class="px-3">Baia Mare, Romania</span>
+					</div>
+
+					<div class="flex items-center mt-6">
+						<svg focusable="false" aria-hidden="true" fill="rgb(153 27 27)" width="24" height="24"
+							viewBox="0 0 24 24">
+							<path
+								d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z">
+							</path>
+						</svg>
+						<span class="px-3 text-gray-400">Not available</span>
+					</div>
+				</div>
+
+				<div class="w-full md:w-1/2 p-3">
+					<form action="YOUR_SERVER_ENDPOINT" method="post" class="space-y-4">
+
+						<div class="flex flex-col">
+							<label for="name" class="mb-2 font-semibold">Name</label>
+							<input type="text" id="name" name="name" placeholder="Enter your name" required
+								class="p-2 border rounded-md focus:outline-none focus:border-neutral-800">
+						</div>
+
+						<div class="flex flex-col">
+							<label for="email" class="mb-2 font-semibold">Email</label>
+							<input type="email" id="email" name="email" placeholder="Enter your email" required
+								class="p-2 border rounded-md focus:outline-none focus:border-neutral-800">
+						</div>
+
+						<div class="flex flex-col">
+							<label for="message" class="mb-2 font-semibold">Message</label>
+							<textarea id="message" name="message" rows="4" placeholder="Type your message here..."
+								required
+								class="p-2 border rounded-md focus:outline-none focus:border-neutral-800"></textarea>
+						</div>
+
+						<button type="submit"
+							class="w-full bg-red-800 hover:bg-neutral-800 text-white py-2 px-4 rounded-md transition duration-300">Send
+							message</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="bg-neutral-800 text-white py-12">
+		<div class="max-w-5xl mx-auto px-4 text-center">
+
+			<div class="mb-8">
+				<img src="img_new/logo_white2.png" alt="Your Company Logo" class="mx-auto">
+			</div>
+
+			<div class="mb-8 text-white-100">
+				<a href="https://github.com/Bulisor" class="group mx-2 inline-block">
+					<svg focusable="false" aria-hidden="true" width="24" height="24" fill="white" wiewBox="0 0 24 24"
+						class="group-hover:fill-current text-red-800">
+						<path
+							d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27">
+						</path>
+					</svg>
+				</a>
+				<a href="https://forum.babylonjs.com/u/MarianG/summary" class="group mx-2 inline-block">
+					<svg focusable="false" aria-hidden="true" width="24" height="24" fill="white" viewBox="0 0 24 24"
+						class="group-hover:fill-current text-red-800">
+						<g transform="translate(0,24) scale(0.1,-0.1)">
+							<path
+								d="M70 211 l-45 -27 0 -64 0 -64 47 -28 48 -27 48 27 47 28 0 65 c0 59 -2 64 -22 67 -23 3 -31 -12 -13 -23 6 -3 10 -26 10 -51 0 -41 -3 -46 -35 -61 -33 -16 -37 -16 -70 0 -33 16 -35 20 -35 65 0 46 1 48 45 72 41 23 53 40 29 46 -5 1 -29 -10 -54 -25z" />
+							<path
+								d="M102 148 c-28 -28 3 -83 33 -58 8 7 15 20 15 29 0 17 -18 41 -30 41 -3 0 -11 -5 -18 -12z" />
+						</g>
+					</svg>
+				</a>
+				<a href="https://www.facebook.com/SmarTeam3D" class="group mx-2 inline-block">
+					<svg focusable="false" aria-hidden="true" width="24" height="24" fill="white" viewBox="0 0 24 24"
+						class="group-hover:fill-current text-red-800">
+						<path
+							d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2m13 2h-2.5A3.5 3.5 0 0 0 12 8.5V11h-2v3h2v7h3v-7h3v-3h-3V9a1 1 0 0 1 1-1h2V5z">
+						</path>
+					</svg>
+				</a>
+				<a href="https://twitter.com/SmarTeam3D" class="group mx-2 inline-block">
+					<svg focusable="false" aria-hidden="true" width="24" height="24" fill="white" wiewBox="0 0 24 24"
+						class="group-hover:fill-current text-red-800">
+						<path
+							d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z">
+						</path>
+					</svg>
+				</a>
+				<a href="https://www.youtube.com/channel/UC99BoLYeomoBYe_x4QhLNnw" class="group mx-2 inline-block">
+					<svg focusable="false" aria-hidden="true" width="24" height="24" fill="white" wiewBox="0 0 24 24"
+						class="group-hover:fill-current text-red-800">
+						<path
+							d="M10 15l5.19-3L10 9v6m11.56-7.83c.13.47.22 1.1.28 1.9.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83-.25.9-.83 1.48-1.73 1.73-.47.13-1.33.22-2.65.28-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44-.9-.25-1.48-.83-1.73-1.73-.13-.47-.22-1.1-.28-1.9-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83.25-.9.83-1.48 1.73-1.73.47-.13 1.33-.22 2.65-.28 1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44.9.25 1.48.83 1.73 1.73z">
+						</path>
+					</svg>
+				</a>
+			</div>
+
+			<div>
+				<p>&copy; 2023 SmarTeam3D. All rights reserved.</p>
+			</div>
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+		document.addEventListener('DOMContentLoaded', function () {
+			const swiper = new Swiper('.swiper-container', {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: '.swiper-pagination',
+					clickable: true,
+				},
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+				/*autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+				}*/
+			});
+		});
+	</script>
+</body>
+
+</html>

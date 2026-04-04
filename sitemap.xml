@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://www.smarteam3d.com/</loc>
+  <lastmod>2019-05-19T10:15:04+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/car_config</loc>
+  <lastmod>2018-03-10T17:20:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/panorama</loc>
+  <lastmod>2018-02-01T12:11:23+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/3DScatterPlot</loc>
+  <lastmod>2018-03-10T17:19:54+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/car_config_ar</loc>
+  <lastmod>2019-05-08T10:27:33+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/photo_viewer</loc>
+  <lastmod>2018-02-01T12:10:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/customHoles</loc>
+  <lastmod>2018-12-28T20:07:27+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.smarteam3d.com/portfolio/leafletand3d</loc>
+  <lastmod>2018-12-28T22:49:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
