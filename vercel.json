@@ -1,8 +1,1 @@
-{
-  "functions": {
-    "app/api/mail/route.ts": {
-      "memory": 128,
-      "maxDuration": 10
-    }
-  }
-}
+{}
