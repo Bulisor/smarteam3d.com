@@ -2,16 +2,17 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-24" style={{ backgroundColor: 'var(--surface)' }}>
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-headings" style={{ fontFamily: 'var(--font-heading)' }}>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ fontFamily: 'var(--font-heading)' }}>
             Who Are We
           </h2>
+          <div className="w-10 h-0.5 bg-primary mx-auto" />
         </div>
 
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <div className="text-justify leading-relaxed space-y-4">
+        <div className="grid md:grid-cols-2 gap-14 items-center">
+          <div className="text-justify leading-relaxed space-y-5" style={{ color: 'var(--text-color)' }}>
             <p>
               &nbsp;&nbsp;&nbsp;&nbsp;Welcome to{' '}
               <strong>
@@ -51,7 +52,7 @@ export default function About() {
               alt="SmarTeam3D"
               width={500}
               height={400}
-              className="w-full max-w-md"
+              className="w-full max-w-md drop-shadow-lg"
             />
           </div>
         </div>

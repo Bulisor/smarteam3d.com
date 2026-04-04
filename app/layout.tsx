@@ -3,6 +3,7 @@ import { Montserrat, Varela_Round } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/layout/Navbar'
 import Footer from '@/components/layout/Footer'
+import ThemeProvider from '@/components/providers/ThemeProvider'
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -32,11 +33,25 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${montserrat.variable} ${varelaRound.variable}`}>
+    <html
+      lang="en"
+      className={`${montserrat.variable} ${varelaRound.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Prevent flash of unstyled theme */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem('theme'),p=window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light';document.documentElement.classList.toggle('dark',(t??p)==='dark')}catch(e){}`,
+          }}
+        />
+      </head>
       <body>
-        <Navbar />
-        {children}
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
