@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(rm:*)",
+      "Bash(cp -r img public/img)",
+      "Bash(cp -r img_new public/img_new)",
+      "Bash(cp -r fav public/fav)",
+      "Bash(mkdir -p D:/Elance_new/smarteam3d.com/public)",
+      "Bash(cp -r portfolio public/portfolio)",
+      "Bash(cp -r assets public/assets)",
+      "Bash(cp:*)"
+    ]
+  }
+}
