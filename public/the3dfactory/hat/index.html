@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+		<title>SmarTeam3D - 3D product viewer, 3D car configurator | 3D advertisement, 3D model viewer, 3D product configurators, virtual tours, virtual reality using WebVR, augmented reality using JSARToolKit, 360 photo viewer</title>
+
+		<meta name="description" content="3D world closer to you | object/character customization, real reproduction of objects, from simple to complex animations, 3D image and video rendering, WebGl technology, augmented reality">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="keywords"  content="3d, webgl, rendering, 3d animation, 3d modeling, 3d games, WebGl, augmented reality, ar, virtual tour, 3d training, 3d video, 3d graphics">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+		<script src="https://code.jquery.com/pep/0.4.3/pep.min.js"></script>  
+		<script src="https://preview.babylonjs.com/babylon.js"></script>
+		<script src="https://preview.babylonjs.com/inspector/babylon.inspector.bundle.js"></script>
+
+		<style>
+			#root, html, body {
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+				background: white;
+			}
+			#canvas {
+				width: 100%;
+				height: 100%;
+				padding: 0;
+				margin: 0;
+				overflow: unset;
+				border: none !important;
+				outline: none !important;
+				display: block;
+			}
+			.customH {
+				height: 100vh;
+			}
+			@media only screen and (max-width: 800px) and (orientation: portrait) {
+				.customH {
+					height: 50vh;
+				}
+			}
+			.img-thumbnail {
+				cursor: pointer;
+			}
+			.selected {
+				filter: drop-shadow(1px 1px 2px gray);
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<div class="container-fluid px-0" id="ui" style="display:none;">
+				<div class="row g-2">
+					<div class="col-sm-8 col-md-8 col-lg-9 col-xl-9 postion-relative customH">
+						<canvas id="canvas" touch-action="none"></canvas>
+					</div>
+					<div class="col-sm-4 col-md-4 col-lg-3 col-xl-3 overflow-auto customH">
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-2">Models</h5>
+							</div>
+						</div>
+						<div class="row g-0 gx-2">
+							<div class="col-3">
+								<img src="images/model1.png" class="img-thumbnail img-fluid model" alt="Panel_fabric_buckle_closure" data-bs-toggle="tooltip" data-bs-placement="auto" title="Fabric Panel - Buckle Closure" onclick="chooseModel(1, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/model2.png" class="img-thumbnail img-fluid model" alt="Panel_fabric_velcro_closure" data-bs-toggle="tooltip" data-bs-placement="auto" title="Fabric Panel - Velcro Closure" onclick="chooseModel(2, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/model3.png" class="img-thumbnail img-fluid model" alt="Panel_mesh_trucker_snap_closure" data-bs-toggle="tooltip" data-bs-placement="auto" title="Mesh Trucker Panel - Snap Closure" onclick="chooseModel(3, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/model4.png" class="img-thumbnail img-fluid model" alt="Panel_mesh_pro_snap_closure" data-bs-toggle="tooltip" data-bs-placement="auto" title="Mesh Pro Panel - Snap Closure" onclick="chooseModel(4, this)">
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-2">Cap Color</h5>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-3">
+								<img src="images/cap1.png" class="img-thumbnail img-fluid capColor selected" alt="Color_solid_1" onclick="chooseCapColor(1, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap2.png" class="img-thumbnail img-fluid capColor" alt="Color_solid_2" onclick="chooseCapColor(2, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap3.png" class="img-thumbnail img-fluid capColor" alt="Color_solid_3" onclick="chooseCapColor(3, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap4.png" class="img-thumbnail img-fluid capColor" alt="Color_solid_4" onclick="chooseCapColor(4, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap5.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_1" onclick="chooseCapColor(5, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap6.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_2" onclick="chooseCapColor(6, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap7.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_3" onclick="chooseCapColor(7, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap8.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_4" onclick="chooseCapColor(8, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap9.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_5" onclick="chooseCapColor(9, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap10.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_6" onclick="chooseCapColor(10, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap11.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_7" onclick="chooseCapColor(11, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap12.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_8" onclick="chooseCapColor(12, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap13.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_9" onclick="chooseCapColor(13, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap14.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_10" onclick="chooseCapColor(14, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap15.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_11" onclick="chooseCapColor(15, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap16.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_12" onclick="chooseCapColor(16, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap17.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_13" onclick="chooseCapColor(17, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/cap18.png" class="img-thumbnail img-fluid capColor" alt="Color_alter_14" onclick="chooseCapColor(18, this)">
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-2">Visor Color</h5>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-3">
+								<img src="images/visor1.png" class="img-thumbnail img-fluid visorColor selected" alt="Color_solid_1" onclick="chooseVisorColor(1, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor2.png" class="img-thumbnail img-fluid visorColor" alt="Color_solid_2" onclick="chooseVisorColor(2, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor3.png" class="img-thumbnail img-fluid visorColor" alt="Color_solid_3" onclick="chooseVisorColor(3, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor4.png" class="img-thumbnail img-fluid visorColor" alt="Color_solid_4" onclick="chooseVisorColor(4, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor5.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_1" onclick="chooseVisorColor(5, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor6.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_2" onclick="chooseVisorColor(6, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor7.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_3" onclick="chooseVisorColor(7, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor8.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_4" onclick="chooseVisorColor(8, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor9.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_5" onclick="chooseVisorColor(9, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor10.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_6" onclick="chooseVisorColor(10, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor11.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_7" onclick="chooseVisorColor(11, this)">
+							</div>
+							<div class="col-3">
+								<img src="images/visor12.png" class="img-thumbnail img-fluid visorColor" alt="Color_alter_8" onclick="chooseVisorColor(12, this)">
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-2">Button & Eyelets Color</h5>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-4">
+								<div class="row g-2">
+									<div class="col-4">
+										<img src="images/eyelet1.png" class="img-thumbnail img-fluid rounded-circle eyeletColor selected" alt="Color_solid_1" onclick="chooseEyeletColor(1, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet4.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_2" onclick="chooseEyeletColor(4, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet3.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_3" onclick="chooseEyeletColor(3, this)">
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row g-2">
+									<div class="col-4">
+										<img src="images/eyelet2.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_3" onclick="chooseEyeletColor(2, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet5.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_1" onclick="chooseEyeletColor(5, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet6.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_2" onclick="chooseEyeletColor(6, this)">
+									</div>
+								</div>
+							</div>
+							<div class="col-4">
+								<div class="row g-2">
+									<div class="col-4">
+										<img src="images/eyelet7.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_3" onclick="chooseEyeletColor(7, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet8.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_3" onclick="chooseEyeletColor(8, this)">
+									</div>
+									<div class="col-4">
+										<img src="images/eyelet9.png" class="img-thumbnail img-fluid rounded-circle eyeletColor" alt="Color_solid_3" onclick="chooseEyeletColor(9, this)">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-2">Logo</h5>
+							</div>
+						</div>
+						<div class="row g-2">
+							<div class="col-2">
+								<img src="images/logo1.png" class="img-thumbnail img-fluid logoUrl selected" alt="Color_solid_1" onclick="chooseLogo(1, this)">
+							</div>
+							<div class="col-2">
+								<img src="images/logo2.png" class="img-thumbnail img-fluid logoUrl" alt="Color_solid_2" onclick="chooseLogo(2, this)">
+							</div>
+							<div class="col-2">
+								<img src="images/logo3.png" class="img-thumbnail img-fluid logoUrl" alt="Color_solid_3" onclick="chooseLogo(3, this)">
+							</div>
+							<div class="col-2">
+								<img src="images/logo4.png" class="img-thumbnail img-fluid logoUrl" alt="Color_solid_4" onclick="chooseLogo(4, this)">
+							</div>
+							<div class="col-2">
+								<img src="images/logo5.png" class="img-thumbnail img-fluid logoUrl" alt="Color_alter_1" onclick="chooseLogo(5, this)">
+							</div>
+							<div class="col-2">
+								<img src="images/logo6.png" class="img-thumbnail img-fluid logoUrl" alt="Color_alter_2" onclick="chooseLogo(6, this)">
+							</div>
+						</div>
+						<div class="row g-0">
+							<div class="col">
+								<h5 class="p-3">&nbsp;</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid h-100 px-0" id="loader" style="display:none;">
+				<div class="h-100 d-flex align-items-center justify-content-center">
+					<div class="progress w-50">
+						<div class="progress-bar progress-bar-striped" role="progressbar" aria-label="loading" style="width: 0%"
+							aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid h-100 px-0" id="error" style="display:none;">
+				<div class="h-100 d-flex align-items-center justify-content-center">
+					<div class="w-50">
+						<h3>WebGL is not supported or it is disable on your browser! ☹️ Check <a href="http://webglreport.com/"
+								target="_blank">here</a></h3>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="index.js"></script>
+    </body>  
+</html>

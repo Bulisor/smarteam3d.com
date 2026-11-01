@@ -1,0 +1,74 @@
+<!doctype html><html><head><title>SmarTeam3D | 3D advertisement, 3D model viewer, 3D product configurators, configurator 3D, virtual tours, virtual reality using WebVR, augmented reality using WEBXR, 360 photo viewer, WebGL3D SOFT</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="description" content=""><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/><style>html, body, p {
+            margin: 0;  
+            padding: 0;
+            overflow: hidden;
+        } 
+        #canvas {
+            width: 100%; height: 100vh; -ms-touch-action : none;  touch-action: none;
+        } 
+        #error, #loader {
+            position: absolute;  margin: auto; top: 0; right: 0; bottom: 0; left: 0; width: 90vw; height: 80vh; text-align:center;
+        }
+        #error h2 {
+            color: white; text-shadow: 1px 1px 2px black, 0 0 15px blue, 0 0 5px maroon;
+        }
+        #error img, #loader img {
+            margin:30px auto; max-width:100%;
+        }
+        .logo {
+            width: 100px; position: absolute; z-index: 1; top: 3px; left: 3px; padding: 2px;
+        }
+        .logo img {
+            width: 100%; height: 100%;
+        }
+        .socialmedia, .menu {
+            position: absolute; z-index: 1; bottom: 4px; padding: 0px 4px; text-align: center; display: inline-flex;
+        }
+        .socialmedia div, .menu div {
+            width: 26px; height: 26px; line-height: 28px; display: inline-block; border-radius: 3px; background-color: #ffffff;     margin: 0 4px;
+        }
+        .socialmedia div a {
+            display: block; color: #9e0707;
+        }
+        .menu div a {
+            display: block; color: #000000;
+        }
+
+		#loading {
+			margin: 40px auto;
+		}
+		
+        .vr_img {
+            background: url('https://unpkg.com/@fortawesome/fontawesome-free@5.9.0/svgs/solid/vr-cardboard.svg') no-repeat center; display: block; width: 70%; height: 100%; margin: 0 auto;
+        }
+
+		progress {
+			width: 250px;
+			-webkit-appearance: none;
+			border: none;
+		}
+ 
+		progress::-webkit-progress-bar {
+			background: black;
+			border-radius: 50px;
+			padding: 2px;
+			box-shadow: 0 1px 0px 0 rgba(255, 255, 255, 0.2);
+		}
+
+		progress::-webkit-progress-value {
+			border-radius: 50px;
+			box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4);
+			background:
+				-webkit-linear-gradient(45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.1) 33%, rgba(0, 0, 0, 0.1) 66%, transparent 66%),
+				-webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.2)),
+				-webkit-linear-gradient(left, #ee6767, #a10606);
+			
+			background-size: 25px 14px, 100% 100%, 100% 100%;
+			animation: move 5s linear 0 infinite;
+			-webkit-animation: move 5s linear 0 infinite;
+		}
+
+		@-keyframes, @-webkit-keyframes move {
+			0% {background-position: 0px 0px, 0 0, 0 0}
+			100% {background-position: -100px 0px, 0 0, 0 0}
+		}</style><script defer="defer" src="./js/runtime.321c44ecf99bc5a68be1.bundle.js"></script><script defer="defer" src="./js/main.b10fa173de713f756063.bundle.js"></script></head><body><canvas id="canvas" touch-action="none"></canvas><div id="ui" style="display:none;"><div class="logo"><img src="assets/images/logo_black2.png" alt="logo"/></div><div class="socialmedia"><div><a title="facebook" href="https://www.facebook.com/SmarTeam3D"><i class="fa fa-facebook-f"></i></a></div><div><a title="twitter" href="https://twitter.com/SmarTeam3D"><i class="fa fa-twitter"></i></a></div><div><a title="youtube" href="https://www.youtube.com/channel/UC99BoLYeomoBYe_x4QhLNnw"><i class="fa fa-youtube-play"></i></a></div></div><div class="menu" style="right: 0px;"><div><a title="home" id="home" href="#"><i class="fa fa-home"></i></a></div><div><a title="adnotations" id="adn" href="#"><i class="fa fa-check-circle"></i></a></div><div><a title="fullscreen" id="fullscreen" href="#"><i class="fa fa-arrows-alt"></i></a></div><div><a class="vr_img" title="vr" id="vrmode" href="#"><i></i></a></div></div></div><div id="loader" style="display:none;"><img src="assets/images/logo_black2.png" alt="logo"/><div id="loading" style="display:block;"><div style="font-weight: bold; padding: 5px; font-style: oblique;"></div><progress value="0" max="100"></progress></div></div><div id="error" style="display:none;"><img src="assets/images/logo_black2.png" alt="logo"/><h2>WebGL is not supported or it is disable on your browser!:( Check <a href="http://webglreport.com/" target="_blank">here</a></h2></div></body></html>

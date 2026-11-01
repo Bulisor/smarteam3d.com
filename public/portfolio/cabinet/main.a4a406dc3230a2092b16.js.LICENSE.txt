@@ -1,0 +1,12 @@
+/*!
+ * PEP v0.5.1 | https://github.com/jquery/PEP
+ * Copyright jQuery Foundation and other contributors | http://jquery.org/license
+ */
+
+/*!
+ * vuex v4.1.0
+ * (c) 2022 Evan You
+ * @license MIT
+ */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/facebook/regenerator/blob/main/LICENSE */

@@ -17,13 +17,13 @@ const projects = [
     content: (
       <ul className="list-disc list-inside space-y-3 pt-4">
         {[
-          { label: 'Car Configurator 1', desc: 'Design your dream car from wheels to paint.', link: '/portfolio/car_config' },
-          { label: '3D Scatterplot', desc: 'A graph where points move freely in 3D space.', link: '/portfolio/3DScatterPlot' },
-          { label: '360 Photo Viewer', desc: 'For those wanting to view the world at 360 degrees.', link: '/portfolio/photo_viewer' },
-          { label: 'Car Configurator 2', desc: 'Design your dream car from wheels to paint.', link: '/portfolio/car_mx5/index' },
-          { label: 'Cabinet Configurator', desc: 'A tool for customizing and visualizing cabinets.', link: null },
-          { label: 'Truck Configurator', desc: 'Design your dream truck from wheels to paint.', link: '/portfolio/truck/index' },
-          { label: '3D Hat Configurator', desc: 'Customize a hat in 3D.', link: '/the3dfactory/hat/index' },
+          { label: 'Car Configurator 1', desc: 'Design your dream car from wheels to paint.', link: '/portfolio/car_config.html' },
+          { label: '3D Scatterplot', desc: 'A graph where points move freely in 3D space.', link: '/portfolio/3DScatterPlot.html' },
+          { label: '360 Photo Viewer', desc: 'For those wanting to view the world at 360 degrees.', link: '/portfolio/photo_viewer.html' },
+          { label: 'Car Configurator 2', desc: 'Design your dream car from wheels to paint.', link: '/portfolio/car_mx5/index.html' },
+          { label: 'Cabinet Configurator', desc: 'A tool for customizing and visualizing cabinets.', link: '/portfolio/cabinet/index.html' },
+          { label: 'Truck Configurator', desc: 'Design your dream truck from wheels to paint.', link: '/portfolio/truck/index.html' },
+          { label: '3D Hat Configurator', desc: 'Customize a hat in 3D.', link: '/the3dfactory/hat/index.html' },
         ].map((item) => (
           <li key={item.label} className="text-sm md:text-base">
             <span className="font-bold" style={{ color: 'var(--heading-color)' }}>{item.label}:</span>{' '}
